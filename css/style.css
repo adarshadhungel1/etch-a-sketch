@@ -25,3 +25,16 @@
     display: flex;
     justify-content: center;
 }
+
+.reset{
+    margin-top: 30px;
+    text-align: center;
+}
+
+#reset{
+    color: rgb(34, 2, 2);
+    background-color: rgb(131, 5, 93);
+    border-radius: 5px;
+    border-color: rgb(172, 3, 101);
+    margin: 3px;
+}
