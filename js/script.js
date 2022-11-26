@@ -18,7 +18,13 @@ function onHover(e){
 }
 
 function onDrag(e){
-    console.log(e.target.className);
+    let name = e.target.className;
+    let classes = name.split(' ');
+    let target = classes[0];
+    
+    this.classList.remove(target);
+    this.classList.add('clicked');
+    console.log(this);
 }
 
 createGrid();
