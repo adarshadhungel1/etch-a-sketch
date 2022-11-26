@@ -13,8 +13,8 @@ function createGrid(size = 16){
     }
 }
 
-function onHover(){
-    return;
+function onHover(e){
+    
 }
 
 function onClick(){
@@ -24,5 +24,5 @@ function onClick(){
 createGrid();
 
 let boxes = document.querySelector(".indv");
-indv.addEventListener('click', onClick);
-indv.addEventListener('mouseover', onHover);
+boxes.addEventListener('mouseover', onHover);
+boxes.addEventListener('click', onClick);
