@@ -1,0 +1,11 @@
+.unclicked{
+    background-color: black;
+}
+
+.hover{
+    background-color: red;
+}
+
+.clicked{
+    background-color: black;
+}
