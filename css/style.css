@@ -9,3 +9,8 @@
 .clicked{
     background-color: black;
 }
+
+.topic{
+    margin-bottom: 30px;
+    text-align: center;
+}
