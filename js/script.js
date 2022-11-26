@@ -6,7 +6,7 @@ function createGrid(size = 16){
         row.classList.add("row");
         for(let j = 0; j<size; j++){
             let box = document.createElement("div");
-            box.classList.add("ind", "unclicked");
+            box.classList.add("indv", "unclicked");
             row.appendChild(box);
         }
         container.appendChild(row);
@@ -22,3 +22,7 @@ function onClick(){
 }
 
 createGrid();
+
+let boxes = document.querySelector(".indv");
+indv.addEventListener('click', onClick);
+indv.addEventListener('mouseover', onHover);
