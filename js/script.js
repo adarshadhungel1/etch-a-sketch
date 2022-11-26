@@ -13,6 +13,12 @@ function createGrid(size = 16){
     }
 }
 
+function resetGrid(){
+    let container = document.querySelector(".container");
+    container.innerHTML = '';
+    createGrid();
+}
+
 function onHover(e){
     return;
 }
@@ -24,7 +30,6 @@ function onDrag(e){
     
     this.classList.remove(target);
     this.classList.add('clicked');
-    console.log(this);
 }
 
 createGrid();
@@ -33,3 +38,6 @@ let boxes = document.querySelectorAll(".indv");
 
 boxes.forEach((item) => {item.addEventListener('mouseover', onHover)});
 boxes.forEach((item) => {item.addEventListener('drag', onDrag)});
+
+let btn = document.querySelector("#reset");
+btn.addEventListener('click',resetGrid);
