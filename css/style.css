@@ -26,7 +26,7 @@
     text-align: center;
 }
 
-#reset{
+#reset, #change{
     color: rgb(34, 2, 2);
     background-color: rgb(131, 5, 93);
     border-radius: 5px;
@@ -34,9 +34,14 @@
     margin: 3px;
 }
 
-.slidecontainer{
+.userinput{
     display:flex;
     margin-top: 30px;
     justify-content: center;
     align-items: center;
+}
+
+#number{
+    border: 3px rebeccapurple solid;
+    border-radius: 4px;
 }
