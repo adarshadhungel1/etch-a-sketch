@@ -15,7 +15,7 @@ function createGrid(size = 16){
     let boxes = document.querySelectorAll(".indv");
 
     boxes.forEach((item) => {item.addEventListener('mouseover', onHover)});
-    boxes.forEach((item) => {item.addEventListener('click', onDrag)});
+    boxes.forEach((item) => {item.addEventListener('drag', onDrag)});
 }
 
 function resetGrid(){
@@ -25,7 +25,11 @@ function resetGrid(){
 }
 
 function onHover(e){
-    console.log(e);
+    let name = e.target.className;
+    let classes = name.split(' ');
+    let target = classes[1];
+    this.classList.remove(target);
+    this.classList.add('clicked');
 }
 
 function onDrag(e){
