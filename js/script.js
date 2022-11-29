@@ -7,14 +7,17 @@ function createGrid(size = 16){
         for(let j = 0; j<size; j++){
             let box = document.createElement("div");
             box.classList.add("indv", "unclicked");
+            box.setAttribute('id', 'forDimension');
             row.appendChild(box);
         }
         container.appendChild(row);
     }
     
+    let dimension = 600/size; //dimension of a box = dimension of grid divided by no of boxes
     let boxes = document.querySelectorAll(".indv");
-
     boxes.forEach((item) => {item.addEventListener('mouseover', onHover)});
+    boxes.forEach((item) => {item.style.height=dimension+'px'});
+    boxes.forEach((item) => {item.style.width=dimension+'px'});
 }
 
 function resetGrid(){
@@ -31,7 +34,19 @@ function onHover(e){
     this.classList.add('clicked');
 }
 
+function uservalue(){
+    if (parseInt(document.getElementById("number").value) <= 40 && parseInt(document.getElementById("number").value) >= 10){
+        resetGrid(parseInt(document.getElementById("number").value));
+    }
+    else {
+        alert('Nope!!');
+    }
+}
+
 createGrid();
 
-let btn = document.querySelector("#reset");
-btn.addEventListener('click',resetGrid);
+let resetbtn = document.querySelector("#reset");
+let userValuebtn = document.querySelector("#change");
+
+resetbtn.addEventListener('click',resetGrid);
+userValuebtn.addEventListener('click', uservalue);
