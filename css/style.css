@@ -1,11 +1,6 @@
 .unclicked{
     background-color: white;
 }
-
-.hover{
-    background-color: red;
-}
-
 .clicked{
     background-color: black;
 }
