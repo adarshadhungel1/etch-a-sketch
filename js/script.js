@@ -1,6 +1,6 @@
 function createGrid(size = 16){
     let container = document.querySelector(".container");
-    
+    console.log(size);
     for(let i = 0; i<size; i++){
         let row = document.createElement("div");
         row.classList.add("row");
@@ -18,12 +18,13 @@ function createGrid(size = 16){
     boxes.forEach((item) => {item.addEventListener('mouseover', onHover)});
     boxes.forEach((item) => {item.style.height=dimension+'px'});
     boxes.forEach((item) => {item.style.width=dimension+'px'});
+    console.log(dimension);
 }
 
-function resetGrid(){
+function resetGrid(size=16){
     let container = document.querySelector(".container");
     container.innerHTML = '';
-    createGrid();
+    createGrid(size);
 }
 
 function onHover(e){
