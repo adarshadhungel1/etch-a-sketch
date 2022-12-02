@@ -27,17 +27,13 @@
     align-items: center;
 }
 
-.reset{
+.reset, .rain, .normal{
     margin-top: 30px;
     text-align: center;
 }
 
-.rain{
-    margin-top: 30px;
-    text-align: center;
-}
 
-#reset, #change, #rainbow{
+#reset, #change, #rainbow, #normal{
     color: rgb(34, 2, 2);
     background-color: rgb(131, 5, 93);
     border-radius: 5px;
