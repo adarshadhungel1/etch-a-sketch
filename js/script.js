@@ -1,6 +1,5 @@
-function createGrid(size = 16){
+function createGrid(size = 60){
     let container = document.querySelector(".container");
-    console.log(size);
     for(let i = 0; i<size; i++){
         let row = document.createElement("div");
         row.classList.add("row");
@@ -18,13 +17,19 @@ function createGrid(size = 16){
     boxes.forEach((item) => {item.addEventListener('mouseover', onHover)});
     boxes.forEach((item) => {item.style.height=dimension+'px'});
     boxes.forEach((item) => {item.style.width=dimension+'px'});
-    console.log(dimension);
 }
 
-function resetGrid(size=16){
+function reset(){
     let container = document.querySelector(".container");
     container.innerHTML = '';
-    createGrid(size);
+    createGrid();
+}
+
+function resetGrid(){
+    let container = document.querySelector(".container");
+    container.innerHTML = '';
+    createGrid(arguments[0]);
+    
 }
 
 function onHover(e){
@@ -44,7 +49,7 @@ function onHover(e){
 }
 
 function uservalue(){
-    if (parseInt(document.getElementById("number").value) <= 40 && parseInt(document.getElementById("number").value) >= 10){
+    if (parseInt(document.getElementById("number").value) <= 100 && parseInt(document.getElementById("number").value) >= 40){
         resetGrid(parseInt(document.getElementById("number").value));
     }
     else {
@@ -60,7 +65,7 @@ let userValuebtn = document.querySelector("#change");
 let rainbtn = document.querySelector("#rainbow");
 let normalbtn = document.querySelector("#normal");  
 
-resetbtn.addEventListener('click',resetGrid);
+resetbtn.addEventListener('click',reset);
 userValuebtn.addEventListener('click', uservalue);
 rainbtn.addEventListener('click',function(){rainbowcolor = true;})
 normalbtn.addEventListener('click',function(){rainbowcolor = false;})
