@@ -57,8 +57,10 @@ createGrid();
 let rainbowcolor = false;
 let resetbtn = document.querySelector("#reset");
 let userValuebtn = document.querySelector("#change");
-let rainbtn = document.querySelector("#rainbow"); 
+let rainbtn = document.querySelector("#rainbow");
+let normalbtn = document.querySelector("#normal");  
 
 resetbtn.addEventListener('click',resetGrid);
 userValuebtn.addEventListener('click', uservalue);
 rainbtn.addEventListener('click',function(){rainbowcolor = true;})
+normalbtn.addEventListener('click',function(){rainbowcolor = false;})
