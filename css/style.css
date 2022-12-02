@@ -15,13 +15,6 @@
     border: 3px red solid;
 }
 
-.unclicked{
-    background-color: white;
-}
-.clicked{
-    background-color: black;
-}
-
 .topic{
     margin-bottom: 30px;
     text-align: center;
