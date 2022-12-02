@@ -17,6 +17,7 @@ function createGrid(size = 60){
     boxes.forEach((item) => {item.addEventListener('mouseover', onHover)});
     boxes.forEach((item) => {item.style.height=dimension+'px'});
     boxes.forEach((item) => {item.style.width=dimension+'px'});
+    console.log("grid created");
 }
 
 function reset(){
@@ -48,6 +49,12 @@ function onHover(e){
     
 }
 
+function onEnter(event){
+    if (event.key === "Enter"){
+        uservalue();
+    }
+}
+
 function uservalue(){
     if (parseInt(document.getElementById("number").value) <= 100 && parseInt(document.getElementById("number").value) >= 40){
         resetGrid(parseInt(document.getElementById("number").value));
@@ -60,12 +67,16 @@ function uservalue(){
 createGrid();
 
 let rainbowcolor = false;
+
 let resetbtn = document.querySelector("#reset");
 let userValuebtn = document.querySelector("#change");
 let rainbtn = document.querySelector("#rainbow");
 let normalbtn = document.querySelector("#normal");  
 
+let input = document.querySelector("#number");
+
 resetbtn.addEventListener('click',reset);
 userValuebtn.addEventListener('click', uservalue);
+input.addEventListener('keypress', onEnter);
 rainbtn.addEventListener('click',function(){rainbowcolor = true;})
 normalbtn.addEventListener('click',function(){rainbowcolor = false;})
