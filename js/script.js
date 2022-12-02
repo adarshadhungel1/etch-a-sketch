@@ -35,7 +35,7 @@ function onHover(e){
     this.classList.add('clicked');
 
     if (rainbowcolor){
-        this.style.backgroundColor = 'red';
+        this.style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);
     }
     else{
         this.style.backgroundColor = 'black';
