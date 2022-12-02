@@ -33,6 +33,7 @@ function onHover(e){
     let target = classes[1];
     this.classList.remove(target);
     this.classList.add('clicked');
+    this.style.backgroundColor = 'red';
 }
 
 function uservalue(){
