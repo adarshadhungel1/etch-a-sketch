@@ -33,7 +33,14 @@ function onHover(e){
     let target = classes[1];
     this.classList.remove(target);
     this.classList.add('clicked');
-    this.style.backgroundColor = 'red';
+
+    if (rainbowcolor){
+        this.style.backgroundColor = 'red';
+    }
+    else{
+        this.style.backgroundColor = 'black';
+    }
+    
 }
 
 function uservalue(){
@@ -47,8 +54,11 @@ function uservalue(){
 
 createGrid();
 
+let rainbowcolor = false;
 let resetbtn = document.querySelector("#reset");
 let userValuebtn = document.querySelector("#change");
+let rainbtn = document.querySelector("#rainbow"); 
 
 resetbtn.addEventListener('click',resetGrid);
 userValuebtn.addEventListener('click', uservalue);
+rainbtn.addEventListener('click',function(){rainbowcolor = true;})
