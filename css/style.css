@@ -21,6 +21,11 @@
     width: 1200px;
 }
 
+.info{
+    font-weight: bold;
+    text-align: center;
+}
+
 .row{
     display: flex;
     justify-content: center;
@@ -37,7 +42,7 @@
     color: rgb(34, 2, 2);
     background-color: rgb(77, 129, 240);
     border-radius: 5px;
-    border-color: rgb(172, 3, 101);
+    border-color: rgb(233, 228, 231);
     margin: 3px;
 }
 
